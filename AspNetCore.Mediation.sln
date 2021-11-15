@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.Mediation", "AspNetCore.Mediation\AspNetCore.Mediation.csproj", "{7048EF7E-2396-4844-97F3-D85BC3AC0A76}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F1F6B6AF-9B67-4BE9-9247-5859B04602D8}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		.gitignore = .gitignore
+		CodeAnalysis.ruleset = CodeAnalysis.ruleset
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7048EF7E-2396-4844-97F3-D85BC3AC0A76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7048EF7E-2396-4844-97F3-D85BC3AC0A76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7048EF7E-2396-4844-97F3-D85BC3AC0A76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7048EF7E-2396-4844-97F3-D85BC3AC0A76}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {ED672F1F-6E31-4B9E-A1A2-4283C3E75213}
+	EndGlobalSection
+EndGlobal
