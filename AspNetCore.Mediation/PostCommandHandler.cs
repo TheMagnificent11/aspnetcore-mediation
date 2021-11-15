@@ -15,8 +15,8 @@ namespace AspNetCore.Mediation
     /// <typeparam name="TContext">Datbase context type</typeparam>
     /// <typeparam name="TRequest">Post request type</typeparam>
     public abstract class PostCommandHandler<TId, TEntity, TContext, TRequest> :
-        BaseRequestHandler<TId, TEntity, TContext, TRequest, OperationResult<TId>>,
-        IRequestHandler<TRequest, OperationResult<TId>>
+        BaseRequestHandler<TId, TEntity, TContext, TRequest, OperationResult>,
+        IRequestHandler<TRequest, OperationResult>
         where TId : IComparable, IComparable<TId>, IEquatable<TId>
         where TEntity : class, IEntity<TId>
         where TContext : DbContext
@@ -38,10 +38,10 @@ namespace AspNetCore.Mediation
         /// <param name="request">Post request</param>
         /// <param name="cancellationToken">Canellation token</param>
         /// <returns>
-        /// An <see cref="OperationResult{T}"/> containing the ID of the created entity if successful,
+        /// An <see cref="OperationResult"/> containing the ID of the created entity if successful,
         /// otherwise bad request operation result containing errors collection
         /// </returns>
-        public async Task<OperationResult<TId>> Handle(TRequest request, CancellationToken cancellationToken)
+        public async Task<OperationResult> Handle(TRequest request, CancellationToken cancellationToken)
         {
             if (request is null)
             {
@@ -60,12 +60,12 @@ namespace AspNetCore.Mediation
 
                     await context.SaveChangesAsync(cancellationToken);
 
-                    return OperationResult.Success(entity.Id);
+                    return OperationResult.Success();
                 }
                 catch (ValidationException ex)
                 {
                     this.Logger.Information(ex, "Validation failed");
-                    return OperationResult.Fail<TId>(ex.Errors);
+                    return OperationResult.Fail(ex.Errors);
                 }
             }
         }
