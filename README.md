@@ -2,7 +2,7 @@
 Extension methods and Autofac modules to assist with configuration of [Mediatr](https://github.com/jbogard/MediatR) for ASP.Net Core sites.
 
 ## Build Status
-[.NET Core](https://github.com/TheMagnificent11/aspnetcore-mediation/actions/workflows/dotnet-core.yml/badge.svg)
+![.NET Core](https://github.com/TheMagnificent11/aspnetcore-mediation/actions/workflows/dotnet-core.yml/badge.svg)
 
 ## Dependencies
 
